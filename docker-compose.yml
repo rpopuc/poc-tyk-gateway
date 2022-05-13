@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  redis:
+    image: redis:5.0.10
+    ports:
+      - 6379:6379
+
+  gateway:
+    image: tykio/tyk-gateway:latest
+    ports:
+      - 8080:8080
+    environment:
+      - TYK_GW_SECRET=6cf68f93-f6d9-4a96-9ed1-68632a6e448e
+    volumes:
+      - ./config/gateway/tyk.conf:/opt/tyk-gateway/tyk.conf
+      - ./.docker/data/gateway/apps:/opt/tyk-gateway/apps
