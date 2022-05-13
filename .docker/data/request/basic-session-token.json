@@ -1,0 +1,14 @@
+{
+    "access_rights": {
+      "3": {
+        "api_name": "httpbin.org - Basic Auth",
+        "api_id": "3",
+        "versions": ["Default"],
+        "allowed_urls": null
+      }
+    },
+    "org_id": "1",
+    "basic_auth_data": {
+      "password": "a-very-secure-password"
+    }
+  }
