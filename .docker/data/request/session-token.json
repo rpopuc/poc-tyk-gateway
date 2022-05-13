@@ -1,0 +1,11 @@
+{
+    "access_rights": {
+      "2": {
+        "api_name": "httpbin.org - Bearer Token Auth",
+        "api_id": "2",
+        "versions": ["Default"],
+        "allowed_urls": null
+      }
+    },
+    "org_id": "1"
+}

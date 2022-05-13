@@ -52,3 +52,14 @@ All the endpoints proxied by Tyk are available in json files inside `.docker/dat
    curl http://localhost:8080/httpbin/get
    ```
 
+- **Request authenticaded proxied `httpbin.org`:**
+
+    First, request an authentication token
+    ```
+    cat .docker/data/request/session-token.json | http post :8080/tyk/keys 'x-tyk-authorization:6cf68f93-f6d9-4a96-9ed1-68632a6e448e'
+    ```
+
+    With the token (copy the value from "key" entry), request:
+    ```
+    http :8080/httpbin/bearer/get 'Authorization: <token>'
+    ```
